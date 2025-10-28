@@ -1,0 +1,39 @@
+version: "3.9"
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: goomer_db
+    environment:
+      POSTGRES_DB: goomer
+      POSTGRES_USER: goomer
+      POSTGRES_PASSWORD: goomer
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U goomer -d goomer"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+
+  api:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: goomer_api
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      NODE_ENV: development
+      DATABASE_URL: postgres://goomer:goomer@db:5432/goomer
+      PORT: 3000
+      DEFAULT_TIMEZONE: America/Sao_Paulo
+    ports:
+      - "3000:3000"
+    command: ["node", "dist/app/server.js"]
+
+volumes:
+  dbdata:
+
