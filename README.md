@@ -15,6 +15,7 @@ API RESTful para gerenciamento de cardápio de restaurante desenvolvida com Type
 - [Stack Técnica](#stack-técnica)
 - [Banco de Dados](#banco-de-dados)
 - [Checklist de Requisitos](#checklist-de-requisitos)
+ - [Melhorias Futuras](#melhorias-futuras)
 
 ---
 
@@ -139,7 +140,7 @@ curl http://localhost:3000/promotions
 
 ## Rotas da API
 
-Documentação completa disponível em [ROTAS_API.md](./ROTAS_API.md).
+Documentação completa disponível em [Rotas](./ROTAS_API.md).
 
 ### Endpoints Principais
 
@@ -413,7 +414,13 @@ O projeto segue commits semânticos em inglês:
 - `develop` - Desenvolvimento principal  
 - `feature/*` - Features individuais
 
-Veja `.git-commits.md` para estratégia completa.
+---
+
+## Melhorias Futuras
+
+Visando a evolução contínua do projeto, separei alguns ajustes e implementações futuras que podem melhorar o desempenho e a experiência de uso sem perder a simplicidade da solução. A lista completa está aqui:
+
+ - [Melhorias para o futuro](./MELHORIAS_FUTURAS.md)
 
 ---
 
