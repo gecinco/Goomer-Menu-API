@@ -384,20 +384,6 @@ npm run db:migrate    # Executa migrations
 
 ---
 
-## Controle de Versão
-
-### Inicializando o Git
-
-Para criar commits organizados:
-
-```bash
-# Windows PowerShell
-.\setup-git.ps1
-
-# Linux/Mac  
-bash setup-git.sh
-```
-
 ### Estrutura de Commits
 
 O projeto segue commits semânticos em inglês:
