@@ -85,20 +85,6 @@ npm run dev
 
 A API estará disponível em `http://localhost:3000`
 
-#### 6. Popule com dados de teste (Opcional)
-
-Para facilitar os testes, execute o script que cria dados de exemplo:
-
-```bash
-node scripts/seed-data.js
-```
-
-Este script cria:
-- 3 Entradas (Bruschetta, Salada Caprese, Azeitonas)
-- 3 Pratos principais (Pizza Margherita, Pizza Calabresa, Risotto)
-- 3 Bebidas (Chopp Artesanal, Refrigerante, Suco)
-- 3 Promoções (uma para cada categoria)
-
 ### Executando com Docker Compose
 
 Para rodar tudo em containers Docker:
