@@ -9,7 +9,7 @@ export const categoryEnum = z.enum([
 
 export const hhmmSchema = z
   .string()
-  .regex(/^\d{2}:\d{2}$/)
+  .regex(/^\d{1,2}:\d{2}$/)
   .refine(
     (val) => {
       const [hh, mm] = val.split(":").map(Number);
